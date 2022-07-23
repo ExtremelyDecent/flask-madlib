@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from stories import story
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "SomeSecretKey"
+# app.debug = True
+# app.config['SECRET_KEY'] = "secret"
 
-debug = DebugToolbarExtension(app)
+# debug = DebugToolbarExtension(app)
 
 @app.route("/")
-def form_input():
+def ask_questions():
     """Makes forms for user input"""
 
     prompts = story.prompts
